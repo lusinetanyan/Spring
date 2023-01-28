@@ -29,12 +29,12 @@ public class InstructorController {
     }
 
     @PutMapping("/instructors/{id}")
-    public void putCourse(@PathVariable int id, @RequestBody Instructor instructor) {
+    public void putInstructor(@PathVariable int id, @RequestBody Instructor instructor) {
         instructorService.saveOrUpdateInstructor(id, instructor);
     }
 
     @PostMapping("/instructors")
-    public void postCourse(@RequestBody Instructor instructor) {
+    public void postInstructor(@RequestBody Instructor instructor) {
         instructorService.saveOrUpdateInstructor(null, instructor);
     }
 }
