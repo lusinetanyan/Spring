@@ -24,17 +24,17 @@ public class StudentController {
     }
 
     @DeleteMapping("/students/{id}")
-    public void deleteInstructor(@PathVariable int id) {
+    public void deleteStudent(@PathVariable int id) {
         studentService.deleteStudent(id);
     }
 
     @PutMapping("/students/{id}")
-    public void putCourse(@PathVariable int id, @RequestBody StudentSave student) {
+    public void putStudent(@PathVariable int id, @RequestBody StudentSave student) {
         studentService.saveOrUpdateStudent(id, student);
     }
 
     @PostMapping("/students")
-    public void postCourse(@RequestBody StudentSave student) {
+    public void postStudent(@RequestBody StudentSave student) {
         studentService.saveOrUpdateStudent(null, student);
     }
 
