@@ -3,6 +3,7 @@ package com.example.test.util.instructor;
 import com.example.test.util.course.Course;
 import jakarta.persistence.*;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -46,5 +47,13 @@ public class Instructor {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Instructor that = (Instructor) o;
+        return id == that.id && fullName.equals(that.fullName);
     }
 }
