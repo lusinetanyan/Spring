@@ -55,4 +55,8 @@ public class InstructorService {
             else instructorRepository.save(instructor);
         }
     }
+
+    public void setInstructorRepository(InstructorRepository instructorRepository) {
+        this.instructorRepository = instructorRepository;
+    }
 }
